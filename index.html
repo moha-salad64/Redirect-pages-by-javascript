@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- <script src="main.js"></script> -->
+</head>
+
+<body>
+    <form action="#" method="get" class="box" id="homepage">
+        <h1>Sing Up</h1>
+        Username <input type="text" name="name" placeholder="Enter your name" />
+        Email <input type="email" name="email" placeholder="Enter your email" />
+        Password <input type="password" name="password" placeholder="Enter your password" />
+        <input type="submit" name="lgin" value="sign up" />
+    </form>
+    <script>
+        const hp = document.getElementById('homepage');
+
+        hp.addEventListener('submit', (event) => {
+            event.preventDefault();
+            window.location.href = 'home.html'; //redirect to home page
+            // window.history.back();  // go back to the index  page
+        })
+    </script>
+
+
+</body>
+
+</html>

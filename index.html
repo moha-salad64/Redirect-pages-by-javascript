@@ -16,15 +16,42 @@
         Email <input type="email" name="email" placeholder="Enter your email" />
         Password <input type="password" name="password" placeholder="Enter your password" />
         <input type="submit" name="lgin" value="sign up" />
+
+        <select name="page" id="pageSelect">
+            <option value="">Service</option>
+            <option value="service">Service</option>
+            <option value="about">About</option>
+            <option value="contact">Contact</option>
+        </select>
     </form>
+    
     <script>
         const hp = document.getElementById('homepage');
 
         hp.addEventListener('submit', (event) => {
             event.preventDefault();
-            window.location.href = 'home.html'; //redirect to home page
+            // window.location.href = 'home.html'; //redirect to home page
             // window.history.back();  // go back to the index  page
-        })
+
+            const pages = document.getElementById('pageSelect').value;
+            console.log(pages);
+            if(pages === ""){
+                window.location.href = 'home.html'; //redirect to home page
+            }
+            else if(pages === 'service'){
+                window.location.href = './multiplyRedirectors/service.html';
+            }
+            else if(pages === 'about'){
+                window.location.href = './multiplyRedirectors/about.html';
+            }
+            else if(pages === 'contact'){
+                window.location.href = './multiplyRedirectors/contact.html';
+            }
+            else {
+            // alert('Not Found 404');
+            document.write('Not Found 404');
+        }
+        })  
     </script>
 
 
